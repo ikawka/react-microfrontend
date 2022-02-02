@@ -1,0 +1,6 @@
+app-one/node_modules
+app-one/build
+app-two/node_modules
+app-two/build
+container/node_modules
+container/build

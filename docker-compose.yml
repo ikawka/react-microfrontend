@@ -1,0 +1,30 @@
+version: "3.3"
+
+services:
+  container-app:
+    container_name: container-app
+    image: nginx
+    ports:
+      - "3000:80"
+    restart: always
+    volumes:
+      - ./config/container/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+      - ./container/build/:/opt/container-app/
+  app-one:
+    container_name: app-one
+    image: nginx
+    ports:
+      - "3001:80"
+    restart: always
+    volumes:
+      - ./config/app-one/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+      - ./app-one/build/:/opt/app-one/
+  app-two:
+    container_name: app-two
+    image: nginx
+    ports:
+      - "3002:80"
+    restart: always
+    volumes:
+      - ./config/app-two/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+      - ./app-two/build/:/opt/app-two/
