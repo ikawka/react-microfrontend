@@ -1,6 +1,6 @@
-import { BrowserRouter, Switch, Route, Redirect, Link } from "react-router-dom";
-import MicroFrontend from "./MicroFrontend";
-import "./App.css";
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import MicroFrontend from './MicroFrontend';
+import './App.css';
 
 const One = ({ history }) => {
   return (
@@ -17,21 +17,7 @@ const Two = ({ history }) => {
 function App() {
   return (
     <BrowserRouter>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "100px 1fr",
-          width: "100%",
-        }}
-      >
-        <div>
-          <div>
-            <Link to="/one/">App One</Link>
-          </div>
-          <div>
-            <Link to="/two/">App Two</Link>
-          </div>
-        </div>
+      <div>
         <Switch>
           <Route path="/one/*" component={One} />
           <Route exact path="/two/*" component={Two} />
