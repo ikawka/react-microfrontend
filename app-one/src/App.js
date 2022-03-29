@@ -2,6 +2,39 @@ import { BrowserRouter, Switch, Route, Redirect, Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import './App.css';
 
+const products = [
+  {
+    id: '001',
+    name: 'Juicy Back Ribs',
+    price: '$15',
+    image: 'http://localhost:3000/images/product-001.jpg',
+  },
+  {
+    id: '002',
+    name: 'Big Burger',
+    price: '$10',
+    image: 'http://localhost:3000/images/product-002.jpg',
+  },
+  {
+    id: '003',
+    name: 'Ultimate Pizza',
+    price: '$20',
+    image: 'http://localhost:3000/images/product-003.jpg',
+  },
+  {
+    id: '004',
+    name: 'Burger Combo',
+    price: '$15',
+    image: 'http://localhost:3000/images/product-004.jpg',
+  },
+  {
+    id: '005',
+    name: 'Potato Fries',
+    price: '$5',
+    image: 'http://localhost:3000/images/product-005.jpg',
+  },
+];
+
 const OneContainer = styled.div`
   padding: 8px;
 `;
@@ -17,38 +50,6 @@ const OneNavigation = styled.div`
 `;
 
 const Home = () => {
-  const products = [
-    {
-      id: '001',
-      name: 'Juicy Back Ribs',
-      price: '$15',
-      image: 'http://localhost:3000/images/product-001.jpg',
-    },
-    {
-      id: '002',
-      name: 'Big Burger',
-      price: '$10',
-      image: 'http://localhost:3000/images/product-002.jpg',
-    },
-    {
-      id: '003',
-      name: 'Ultimate Pizza',
-      price: '$20',
-      image: 'http://localhost:3000/images/product-003.jpg',
-    },
-    {
-      id: '004',
-      name: 'Burger Combo',
-      price: '$15',
-      image: 'http://localhost:3000/images/product-004.jpg',
-    },
-    {
-      id: '005',
-      name: 'Potato Fries',
-      price: '$5',
-      image: 'http://localhost:3000/images/product-005.jpg',
-    },
-  ];
   return (
     <OneContainer>
       <h1>Browse Products</h1>
